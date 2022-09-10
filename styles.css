@@ -152,6 +152,7 @@ h1 {
 
 .modal {
   position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -166,6 +167,7 @@ h1 {
 
 .overlay {
   position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -181,8 +183,8 @@ h1 {
   position: fixed;
   overflow: hidden;
   font-family: "Roboto", sans-serif;
-  margin-top: 13vh;
-  margin-bottom: 10vh;
+  margin-top: 0.5rem;
+  /* margin-bottom: 3rem; */
   margin-left: 20px;
   display: flex;
   flex-direction: column;
@@ -250,13 +252,49 @@ h1 {
   color: #333;
 }
 
+/* Categories */
+.category:first-child {
+  background: url("") no-repeat center center/cover;
+}
+.category:nth-child(2) {
+  background: url("party1.jpg") no-repeat center center/cover;
+}
+.category:nth-child(3) {
+  background: url("party2.jpg") no-repeat center center/cover;
+}
+.category:nth-child(4) {
+  background: url("party3.jpg") no-repeat center center/cover;
+}
+
+.categories {
+  margin-top: 5rem;
+}
+
+.category {
+  width: 65vw;
+  margin: 27px;
+  margin-left: 30%;
+  height: 33vh;
+  border: 2px #fff solid;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  padding-top: 15px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
 @media screen and (max-width: 768px) {
   .slider {
     width: 90vw;
     height: 35vh;
+    margin-top: 5rem;
     display: flex;
     margin-right: auto;
     align-items: center;
+    position: relative;
   }
   .buttons button#next {
     position: absolute;
@@ -268,6 +306,18 @@ h1 {
     top: 29%;
     left: 7%;
   }
+  .category {
+    width: 90vw;
+    margin-left: 20px;
+  }
+}
+.cat-heading {
+  /* margin: px; */
+  margin-left: 30%;
+  text-align: center;
+  display: flex;
+
+  text-transform: uppercase;
 }
 
 .slide:first-child {
@@ -278,38 +328,4 @@ h1 {
 }
 .slide:nth-child(3) {
   background: url("party3.jpg") no-repeat center center/cover;
-}
-
-/* Categories */
-.category:first-child {
-  background: url("party1.jpg") no-repeat center center/cover;
-}
-.category:nth-child(2) {
-  background: url("party2.jpg") no-repeat center center/cover;
-}
-.category:nth-child(3) {
-  background: url("party3.jpg") no-repeat center center/cover;
-}
-
-.categories {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 12vh;
-  margin-left: 340px;
-
-  width: 65vw;
-}
-
-.category {
-  margin: 15px;
-  height: 30vh;
-  border: 2px #fff solid;
-  border-radius: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-transform: uppercase;
-  padding-top: 15px;
-  cursor: pointer;
 }
