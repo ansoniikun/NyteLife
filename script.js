@@ -112,24 +112,20 @@ if (auto) {
 }
 
 //Swipe feature
-let touchstartX = 0;
-let touchendX = 0;
+// let touchstartX = 0;
+// let touchendX = 0;
 
-const checkDirection = () => {
-  if (touchendX < touchstartX) {
-    prevSlide();
-  }
-} 
+// const checkDirection = () => {
+//   if (touchendX < touchstartX) {
+//     prevSlide();
+//   }
+// }
 
-slides.addEventListener('touchstart', e => {
-  touchstartX = e.chengedTouches[0].screenX
-});
+// slides.addEventListener('touchstart', e => {
+//   touchstartX = e.chengedTouches[0].screenX
+// });
 
-slides.addEventListener('touchend', e => {
-  touchendX = e.chengedTouches[0].screenX;
-  checkDirection();
-});
-
-
-
-
+// slides.addEventListener('touchend', e => {
+//   touchendX = e.chengedTouches[0].screenX;
+//   checkDirection();
+// });
