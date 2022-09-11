@@ -6,15 +6,17 @@
 }
 
 body {
-  background: #333;
-  color: #fff;
+  background: #fff;
+  color: #333;
+  font-family: 'Poppins';
 }
 
 nav {
+  background: url('nav-background.jpg') no-repeat center center/cover;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 8vh;
+  min-height: 12vh;
   font-family: "Poppins", sans-serif;
   background-color: #956ce3;
   position: fixed;
@@ -28,13 +30,13 @@ nav {
   text-transform: uppercase;
   letter-spacing: 5px;
   font-size: 20px;
-  margin-left: 50px;
+  margin-left: 35px;
 }
 
 .nav-links {
   display: flex;
   justify-content: space-around;
-  width: 30%;
+  width: 25%;
   color: #fff;
   text-decoration: none;
   font-size: 14px;
@@ -45,8 +47,10 @@ nav {
   list-style: none;
   border: #fff;
   border-style: solid;
-  border-radius: 1rem;
-  padding: 5px;
+  border-radius: 6px;
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
   cursor: pointer;
 }
 
@@ -180,16 +184,16 @@ h1 {
 /* Carousel */
 .slider {
   position: relative;
-  position: fixed;
+  /* position: fixed; */
   overflow: hidden;
   font-family: "Roboto", sans-serif;
-  margin-top: 0.5rem;
+  margin-top: 4.8rem;
   /* margin-bottom: 3rem; */
   margin-left: 20px;
   display: flex;
   flex-direction: column;
-  border: #fff solid;
-  border-radius: 1rem;
+  border: 0.01px none solid;
+  border-radius: 6px;
   width: 257px;
   height: 82vh;
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.405);
@@ -209,6 +213,7 @@ h1 {
   bottom: 70px;
   left: 0;
   /* width: 70px; */
+  color: #fff;
 }
 
 .slide.current {
@@ -217,20 +222,26 @@ h1 {
 }
 
 .slide.current .content {
+  display: flex;
+  position: absolute;
   opacity: 1;
+  transition: all 0.7s ease-in-out 0.3s;
+  bottom: 1%;
+  left: 18%;
+  font-family: 'Roboto';
 }
 
 .buttons button#next {
   position: absolute;
-  top: 50%;
+  top: 135%;
   left: 242px;
-  position: fixed;
+  /* position: fixed; */
 }
 .buttons button#prev {
   position: absolute;
-  top: 50%;
+  top: 135%;
   left: 27px;
-  position: fixed;
+  /* position: fixed; */
 }
 .buttons button {
   border: 2px solid;
@@ -251,13 +262,14 @@ h1 {
   background-color: #fff;
   color: #333;
 }
-
+v
 /* Categories */
 .category:first-child {
   background: url("") no-repeat center center/cover;
 }
 .category:nth-child(2) {
   background: url("party1.jpg") no-repeat center center/cover;
+  margin-top: 4px;
 }
 .category:nth-child(3) {
   background: url("party2.jpg") no-repeat center center/cover;
@@ -267,7 +279,11 @@ h1 {
 }
 
 .categories {
-  margin-top: 5rem;
+  position: absolute;
+  top: 87%;
+  right: 23%;
+  /* margin-top: 5rem; */
+  
 }
 
 .category {
@@ -275,8 +291,8 @@ h1 {
   margin: 27px;
   margin-left: 30%;
   height: 33vh;
-  border: 2px #fff solid;
-  border-radius: 1rem;
+  border: 0.01px none solid;
+  border-radius: 6px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -284,13 +300,43 @@ h1 {
   padding-top: 15px;
   cursor: pointer;
   overflow: hidden;
+  color: #fff;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.405);
 }
+
+.cat-heading {
+  /* position: relative; */
+  /* margin: px; */
+  margin-left: 30%;
+  margin-bottom: 2px;
+  /* text-align: center; */
+  text-transform: uppercase;
+}
+
+.landing-banner{
+  position: relative;
+  /* border: 2px #333 solid; */
+  margin-top:12vh;
+  height: 70vh;
+  color: #fff;
+  width: 100vw;
+  background: url('Eventcollage.jpg') no-repeat center center/cover;
+}
+
+.banner-content {
+    color: #fff;
+    /* z-index: 10; */
+    font-family: 'Roboto';
+    font-size: xx-large;
+    padding-top: 250px;
+    padding-left: 250px;
+  }
 
 @media screen and (max-width: 768px) {
   .slider {
     width: 90vw;
     height: 35vh;
-    margin-top: 5rem;
+    margin-top: 8rem;
     display: flex;
     margin-right: auto;
     align-items: center;
@@ -298,27 +344,43 @@ h1 {
   }
   .buttons button#next {
     position: absolute;
-    top: 29%;
-    left: 85%;
+    top: 90%;
+    left: 86%;
   }
   .buttons button#prev {
     position: absolute;
-    top: 29%;
+    top: 90%;
     left: 7%;
   }
+  .categories{
+    right: 0%;
+    left: 0%;
+    top: 120%;
+  }
+
   .category {
     width: 90vw;
     margin-left: 20px;
   }
-}
-.cat-heading {
-  /* margin: px; */
-  margin-left: 30%;
-  text-align: center;
-  display: flex;
+  
+  .cat-heading{
+    margin-left: 16%;
+  }
 
-  text-transform: uppercase;
+  .landing-banner{
+    height: 40vh;
+    /* margin-top: 108px; */
+  }
+  .banner-content {
+    color: #fff;
+    /* z-index: 10; */
+    font-family: 'Roboto';
+    font-size: large;
+    padding-top: 120px;
+    padding-left: 60px;
+  }
 }
+
 
 .slide:first-child {
   background: url("party1.jpg") no-repeat center center/cover;

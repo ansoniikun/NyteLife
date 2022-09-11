@@ -110,3 +110,26 @@ if (auto) {
   //Run next slide at interval time
   slideInterval = setInterval(nextSlide, intervalTime);
 }
+
+//Swipe feature
+let touchstartX = 0;
+let touchendX = 0;
+
+const checkDirection = () => {
+  if (touchendX < touchstartX) {
+    prevSlide();
+  }
+} 
+
+slides.addEventListener('touchstart', e => {
+  touchstartX = e.chengedTouches[0].screenX
+});
+
+slides.addEventListener('touchend', e => {
+  touchendX = e.chengedTouches[0].screenX;
+  checkDirection();
+});
+
+
+
+
