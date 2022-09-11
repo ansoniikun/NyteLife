@@ -45,12 +45,12 @@ nav {
 
 .nav-links li {
   list-style: none;
-  border: #fff;
+  border: 1.5px #fff;
   border-style: solid;
   border-radius: 6px;
   padding: 10px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
   cursor: pointer;
 }
 
